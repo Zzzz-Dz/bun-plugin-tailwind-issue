@@ -71,7 +71,7 @@ function App() {
 
   return (
     <>
-    <p className="font-bold text-9xl text-amber-300">123</p>
+      <p className="font-bold text-9xl text-amber-300">font-bold text-9xl</p>
       <SidebarProvider
         open={true}
         className="relative h-screen w-screen"
@@ -82,12 +82,23 @@ function App() {
       >
         <AppSidebar />
         {/* 主体 */}
-        <p className="font-semibold bg-blue-500 text-red-500">123456</p>
-        <p className="font-semibold bg-blue-500 text-red-500">123456</p>
-        <p className="font-semibold bg-blue-500 text-red-500">123456</p>
-        <p className="font-semibold bg-blue-500 text-red-500">123456</p>
-        <p className="font-semibold bg-blue-500 text-red-500">123456</p>
-        <div className=""><Outlet /></div>
+        <div>
+          <p className="text-4xl font-semibold bg-blue-500 text-red-500">
+            cant't use color: bg-blue-500 text-red-500
+          </p>
+          <br />
+          <p className="text-4xl font-semibold bg-yellow-500 text-green-500">
+            cant't use color: bg-yellow-500 text-green-500
+          </p>
+          <br />
+          <p className="text-4xl bg-black text-white">
+            can use color: bg-black text-white
+          </p>
+          <br />
+        </div>
+        <div className="">
+          <Outlet />
+        </div>
       </SidebarProvider>
       <ToastContainer
         position="top-center"
